@@ -1,0 +1,20 @@
+# Dependencies and generated output
+node_modules/
+out/
+dist/
+coverage/
+*.tsbuildinfo
+*.log
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.ambi/
+*.pem
+*.key
+
+# Editor, operating system, and agent-local files
+.DS_Store
+.idea/
+.openai/

@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Dave for ChatGPT",
+  "version": "0.3.0",
+  "description": "Connect a ChatGPT conversation to Dave on your Mac.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA09cYZFViybRoJFDpaY5jrMyIqcy5GO4zdqCm1/b1lH/oeS3SKRnaHI7VAaVMSrsDqdgHWQkxwRJLKrOUXVEj2BuZn/oM4pqi1f+ITLokxxCesFa4205o7Aa/50De8AdECvXUHRLvYtMqvrfWdPIZF4eRKJRbcGx6Hm8pKRjo5Gy84YfZUeHdK8O72w8BJG9ySoVgAFDfeJunWspaEXWHpxbpc9cYpH2J5VZoyD7JNJGt2KFJ2oMnOY4+B574hG9K4TSztihX2Ol536OpNW9G2N+8MvOtAbU1LpP8eGB2+QAq/BpWX0WrJHzFIznPkRMEGAP9UMdvUb3HCHamsNQmewIDAQAB",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "nativeMessaging"
+  ],
+  "incognito": "not_allowed",
+  "background": {
+    "service_worker": "worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Connect this chat to Dave",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "32": "icon.png"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none';"
+  },
+  "minimum_chrome_version": "120",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}

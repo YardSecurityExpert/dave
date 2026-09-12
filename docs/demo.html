@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dave concept demo · Joe’s afternoon</title>
+  <meta name="description" content="A scripted concept demo of Dave. The examples illustrate the broader idea and do not connect to live AI services.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="demo-guide.css">
+</head>
+<body>
+  <div class="concept-notice"><a href="/">Dave</a><span>Concept demo · Scripted examples</span></div>
+  <button class="scrim" aria-label="Close sidebar"></button>
+  <aside class="sidebar" aria-label="Sidebar">
+    <div class="sidebar-top"><button class="wordmark" data-action="new">Codex</button><div class="sidebar-tools"><button class="icon-button" data-action="search" aria-label="Search chats" data-icon="search"></button><button class="icon-button" data-action="sidebar" aria-label="Close sidebar" data-icon="panel"></button></div></div>
+    <nav class="primary-nav">
+      <button class="nav-item selected" data-action="new"><i data-icon="edit"></i>New chat</button>
+      <button class="nav-item" data-action="images"><i data-icon="images"></i>Images</button>
+      <button class="nav-item" data-action="library"><i data-icon="library"></i>Library</button>
+      <button class="nav-item" data-action="projects"><i data-icon="folder"></i>Projects</button>
+      <button class="nav-item" data-action="scheduled"><i data-icon="clock"></i>Scheduled</button>
+      <button class="nav-item" data-action="plugins"><i data-icon="plugins"></i>Plugins</button>
+      <button class="nav-item" data-action="more"><i data-icon="more"></i>More</button>
+    </nav>
+    <div class="history"><div class="recents-heading"><h2>Recents <i data-icon="chevron"></i></h2><div><button class="icon-button" data-action="new" aria-label="Start new session" data-icon="edit"></button><button class="icon-button" data-action="recent-options" aria-label="Recents options" data-icon="more"></button></div></div><div id="chat-list"></div></div>
+    <div class="sidebar-bottom profile-row"><button class="profile" data-action="settings"><img class="avatar" src="joe.png" alt=""><span>Joe<small>Pro</small></span></button><button class="icon-button" data-action="about" aria-label="About this local preview" data-icon="store"></button></div>
+  </aside>
+  <main>
+    <header><button class="icon-button reopen" data-action="sidebar" aria-label="Open sidebar" data-icon="panel"></button><div class="mode-tabs" role="tablist" aria-label="Mode"><button role="tab" aria-selected="true" data-mode="Chat">Chat</button><button role="tab" aria-selected="false" data-mode="Work">Work</button></div><button class="icon-button temporary" data-action="temporary" aria-label="Temporary chat" data-icon="temporary"></button></header>
+    <div class="conversation" id="conversation" aria-live="polite" hidden></div>
+    <section class="start-surface">
+      <h1>How can I help, Joe?</h1>
+      <div class="composer-area">
+        <form id="composer" class="composer">
+          <button type="button" class="icon-button" aria-label="Add files and more" data-action="attach" data-icon="plus"></button>
+          <textarea rows="1" placeholder="Ask Codex" aria-label="Ask Codex"></textarea>
+          <button type="button" class="model-selector" data-action="model" aria-label="Choose model">6 <span>Pro</span><i data-icon="chevron"></i></button>
+          <button type="button" class="icon-button" aria-label="Start dictation" data-action="voice" data-icon="mic"></button>
+          <button type="submit" class="send-button" aria-label="Send message" disabled data-icon="arrow"></button>
+        </form>
+        <div id="attachment" hidden></div>
+      </div>
+      <button class="pill capabilities" data-action="priorities" aria-expanded="false">Show me my priorities for today</button>
+      <div class="suggestions" hidden></div>
+    </section>
+
+  </main>
+  <dialog id="modal"><div class="dialog-top"><h2 id="dialog-title"></h2><button class="icon-button" aria-label="Close dialog" data-action="close" data-icon="close"></button></div><div id="dialog-content"></div></dialog>
+  <input id="file-input" type="file" hidden>
+  <template id="priorities-template">
+    <div class="brief-timestamp">Today · 1:12pm</div>
+    <article class="brief-body">
+      <span class="brief-label">Your afternoon</span>
+      <p class="brief-date"><strong>Four sessions finished yesterday.</strong></p>
+
+      <section class="today-sessions" hidden>
+      <h2>Today’s sessions</h2>
+      <ul><li><strong>Architecture draft:</strong> preparing the design for review.</li><li><strong>Bug 97831 investigation:</strong> tracing the reported issue.</li></ul>
+      </section>
+      <h2 class="yesterday-heading">Finished yesterday</h2>
+      <ul><li><strong>Fix 48217:</strong> invitation retry bug · Finished yesterday.</li><li><strong>Fix 63104:</strong> onboarding validation · Finished yesterday.</li><li><strong>Explore 72590:</strong> event processing architecture · Finished yesterday.</li><li><strong>Build 84623:</strong> workspace export flow · Finished yesterday.</li></ul>
+      <p class="muted">Dave is on · Keeping track of your commitments.</p>
+    </article>
+  </template>
+  <template id="dashboard-review-template">
+    <article class="dashboard-review brief-body">
+      <span class="review-status"><span aria-hidden="true">✓</span> Finished in the background</span>
+      <h2>Your dashboard investigation is ready</h2>
+      <p>I kept investigating while you were in other sessions. Here’s what changed over the past week.</p>
+      <p class="investigation-steps">✓ Reviewed code changes <span>·</span> ✓ Compared activation definitions <span>·</span> ✓ Generated chart</p>
+      <figure class="activation-chart">
+        <div class="chart-heading"><strong>Client activation</strong><span>6–12 Sep</span></div>
+        <div class="chart-metrics"><div><strong>45%</strong><span>Reported activation</span></div><div><strong>63%</strong><span>Using the previous definition</span></div></div>
+        <a href="activation-results.svg" target="_blank" rel="noopener" aria-label="Open activation chart at full size"><img src="activation-results.svg" width="760" height="300" alt="Seven-day activation chart. Both series stay near 63% through September 9. After a denominator change on September 10, reported activation falls to 45%, while the previous definition remains near 63%. Illustrative demo data."></a>
+        <figcaption><span class="chart-key reported">Reported activation</span><span class="chart-key previous">Previous definition</span></figcaption>
+      </figure>
+      <h2>The drop points to a reporting change</h2>
+      <p>Invited accounts were added to the denominator before they finished onboarding. Using the previous definition, activation stays near 63%. That explains the 18 percentage point gap in this example.</p>
+      <div class="daily-focus"><strong>Your next step · About 10 minutes</strong><p>Check the denominator change against the agreed activation definition. Then review the note for Caroline before her 4pm customer call.</p></div>
+      <h2>Review checklist</h2>
+      <ul><li>Compare the old and new activation definitions.</li><li>Check completed activations against the underlying events.</li><li>Confirm whether this is a reporting change or a product regression.</li></ul>
+      <button class="pill dark" data-action="review-findings">Review findings and draft reply</button>
+      <p class="demo-note">Simulated background work and illustrative chart data for this demo. No repository has been inspected.</p>
+    </article>
+  </template>
+  <script src="app.js"></script>
+  <script src="demo-guide.js"></script>
+</body>
+</html>

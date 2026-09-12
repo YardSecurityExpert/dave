@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dave · Turn an unfinished chat into a next step</title>
+  <meta name="description" content="Dave connects a chosen ChatGPT conversation in Chrome to a Mac app. Review an AI task draft, edit it, and approve it before it goes to Ambiguous.">
+  <link rel="canonical" href="https://thedave.app/">
+  <link rel="icon" type="image/png" href="dave.png">
+  <link rel="stylesheet" href="landing.css?v=20260914">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Dave home"><img src="dave.png" alt="" width="46" height="46"><span>Dave</span></a>
+    <nav aria-label="Main navigation"><a class="how-link" href="#how-it-works">How it works</a><a class="nav-demo" href="demo.html">Concept demo <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">MAC ALPHA · CHATGPT IN CHROME</p>
+        <h1 id="hero-title">You started<br>with a chat.<br><span>Take the next step.</span></h1>
+        <p class="hero-description">Connect a ChatGPT conversation to Dave. Ask for a next step, edit the proposed task, and approve it before it goes to Ambiguous.</p>
+        <div class="hero-actions"><a class="primary-link" href="#how-it-works">See the workflow <span aria-hidden="true">↓</span></a><a class="text-link" href="https://github.com/YardSecurityExpert/dave">Project on GitHub</a></div>
+        <p class="demo-context">Local Mac alpha. Public installer coming later.</p>
+      </div>
+      <div class="demo-scene" aria-label="Illustration of a task draft in Dave">
+        <div class="scene-glow" aria-hidden="true"></div>
+        <div class="work-preview">
+          <div class="window-heading"><span>ChatGPT · Chrome</span><span class="window-dots" aria-hidden="true">•••</span></div>
+          <div class="work-row"><span class="task-check" aria-hidden="true">↗</span><span>Plan the demo<small>A conversation you chose to connect</small></span></div>
+          <p class="chat-excerpt">“What should I do next to get this demo ready?”</p>
+        </div>
+        <article class="dave-note">
+          <img class="dave-character" src="dave.png" alt="Dave, the blue focus companion" width="140" height="140">
+          <div class="note-brand">DAVE · TASK PROPOSAL</div>
+          <h2>Make the next<br>step concrete.</h2>
+          <div class="proposal-field"><span>Title</span><strong>Record the Dave demo</strong></div>
+          <div class="proposal-field"><span>Description</span><p>Show the chat connection, review a task, and check the saved result.</p></div>
+          <div class="proposal-actions" aria-label="Illustrated task review controls"><span class="approve-label">Create in Ambiguous</span><span>Cancel proposal</span></div>
+          <p class="proposal-note">You can edit this draft before approving it.</p>
+        </article>
+        <p class="scene-caption">Interface illustration · the alpha supports task review.</p>
+      </div>
+    </section>
+    <section class="how-it-works" id="how-it-works" aria-label="How Dave works">
+      <div><span class="step-number">01</span><h2>Choose the conversation.</h2><p>Preview the recent messages in the Chrome helper. In Dave, choose whether to share that excerpt with Ask Dave.</p></div>
+      <div><span class="step-number">02</span><h2>Review the next step.</h2><p>Ask Dave to propose an Ambiguous task. Edit its title and description, or cancel the proposal.</p></div>
+      <div><span class="step-number">03</span><h2>Save it. Return to work.</h2><p>Approve the task, load its status from Ambiguous, and use Return to chat to reopen your source tab.</p></div>
+    </section>
+    <section class="verified" aria-labelledby="verified-title">
+      <div class="verified-heading"><p class="eyebrow">TESTED IN THE MAC ALPHA</p><h2 id="verified-title">A draft becomes a task<br>when you approve it.</h2><p>The live test covered a model reply, an editable task proposal, cancellation, creation, and retrieval from Ambiguous.</p></div>
+      <ul class="verified-list">
+        <li><span aria-hidden="true">✓</span><div><strong>Featherless answers.</strong><p>The model runs through Dave’s local CopilotKit runtime.</p></div></li>
+        <li><span aria-hidden="true">✓</span><div><strong>CopilotKit shows the review form.</strong><p>Edits are preserved. Cancelling creates no task.</p></div></li>
+        <li><span aria-hidden="true">✓</span><div><strong>Ambiguous saves the approved task.</strong><p>Dave receives the task ID and loads its status back.</p></div></li>
+      </ul>
+    </section>
+    <section class="alpha-details" aria-label="Alpha availability and privacy">
+      <div><h2>You choose what to share.</h2><p>The Chrome helper connects a selected conversation. Sharing its recent excerpt with AI is a separate choice in Dave. Provider keys are stored encrypted on your Mac.</p></div>
+      <div><h2>What’s next.</h2><p>Autonomous task execution, reading conversations in the native ChatGPT Mac app, and a public Mac installer are still being built.</p><p><a class="text-link" href="demo.html">Explore the original concept demo <span aria-hidden="true">↗</span></a><small>Scripted examples show the broader idea.</small></p></div>
+    </section>
+  </main>
+  <footer><span>Dave · Finish what you started.</span><span>Mac alpha 0.3.1 · Live checks: 14 September 2026 · #AgentsEverywhere</span></footer>
+</body>
+</html>

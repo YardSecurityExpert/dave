@@ -1,0 +1,14 @@
+:root {
+  --da-surface: #fbfcff;
+  --da-surface-2: #f0f4ff;
+  --da-border: #dee5f4;
+  --da-text: #172c58;
+  --da-text-muted: #596987;
+  --da-primary: #3459e6;
+  --da-olive: #3459e6;
+  --da-burrow: #e5ebff;
+  --da-meadow: #e5f2ee;
+  --da-fence: #e5ebff;
+  --da-radius: 18px;
+  --da-font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}

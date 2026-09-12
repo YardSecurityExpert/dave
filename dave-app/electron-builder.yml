@@ -1,0 +1,40 @@
+appId: app.thedave.desktop
+productName: Dave
+directories:
+  output: dist
+files:
+  - out/main/**/*
+  - out/preload/**/*
+  - out/renderer/**/*
+  - package.json
+asar: true
+npmRebuild: false
+extraResources:
+  - from: out/native/dave-chrome-bridge
+    to: native/dave-chrome-bridge
+  - from: ../dave-extension
+    to: chrome-extension
+  - from: out/native/dave-helper
+    to: native/dave-helper
+  - from: assets/dave.png
+    to: dave.png
+mac:
+  category: public.app-category.productivity
+  target:
+    - target: dmg
+      arch: arm64
+  icon: assets/dave.png
+  minimumSystemVersion: "14.0"
+  hardenedRuntime: true
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.plist
+  binaries:
+    - Contents/Resources/native/dave-chrome-bridge
+    - Contents/Resources/native/dave-helper
+  extendInfo:
+    LSUIElement: true
+    NSAppleEventsUsageDescription: Dave reads the active browser tab during your mission and restores your saved work when you ask.
+    NSAccessibilityUsageDescription: Dave reads your focused window title during your mission and restores your saved work window.
+dmg:
+  title: Dave
+artifactName: "Dave-${version}-${arch}.${ext}"

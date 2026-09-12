@@ -1,0 +1,67 @@
+:root {
+  --cpk-font-sans: var(--da-font);
+  --cpk-default-font-family: var(--da-font);
+  --background: var(--da-surface);
+  --foreground: var(--da-text);
+  --primary: var(--da-primary);
+  --primary-foreground: #fff;
+  --border: var(--da-border);
+  --radius: var(--da-radius);
+  --muted: var(--da-surface-2);
+  --muted-foreground: var(--da-text-muted);
+}
+.da-shell::-webkit-scrollbar {
+  width: 4px;
+}
+.da-shell::-webkit-scrollbar-thumb {
+  background: var(--da-border);
+  border-radius: 4px;
+}
+.da-header button {
+  font-size: 10px;
+  padding: 4px 8px;
+}
+.da-fields input {
+  margin-top: 4px;
+}
+.da-chat {
+  height: 420px;
+}
+.da-chat h1 {
+  font-size: 20px;
+}
+.da-fence-panel {
+  margin: -4px;
+}
+.da-status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.da-empty {
+  padding: 30px 8px;
+  text-align: center;
+}
+.da-empty h1 {
+  font-size: 28px;
+}
+.da-kicker {
+  margin: 16px 0 8px;
+}
+.da-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.da-section-title button {
+  font-size: 10px;
+  padding: 5px;
+}
+.da-info {
+  border-top: 1px solid var(--da-border);
+  margin-top: 16px;
+  padding-top: 12px;
+}
+.da-fields button {
+  margin-top: 5px;
+}

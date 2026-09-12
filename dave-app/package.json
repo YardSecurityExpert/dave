@@ -1,0 +1,60 @@
+{
+  "name": "dave-app",
+  "version": "0.3.1-alpha.1",
+  "private": true,
+  "type": "module",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "npm run build:native && electron-vite dev",
+    "build": "npm run build:native && electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/main/*.test.ts",
+    "demo": "npm run build:native && DAVE_DEMO=1 electron-vite dev",
+    "test:runtime": "node --test scripts/runtime.test.mjs",
+    "verify": "npm run typecheck && npm test && npm run test:extension && npm run build && npm run test:runtime && npm run test:native && npm run test:chrome-native",
+    "build:native": "node scripts/build-native.mjs",
+    "package:mac": "npm run build && node scripts/package.mjs",
+    "dist:mac": "npm run verify && node scripts/release.mjs",
+    "test:native": "node --test scripts/native.test.mjs",
+    "postinstall": "node node_modules/electron/install.js",
+    "test:extension": "node --test scripts/extension.test.mjs",
+    "test:chrome-native": "node --import tsx --test scripts/chrome-native.test.mjs"
+  },
+  "dependencies": {
+    "@ag-ui/client": "0.0.59",
+    "@ag-ui/core": "0.0.59",
+    "@ai-sdk/openai": "3.0.112",
+    "@copilotkit/react-core": "1.71.1",
+    "@copilotkit/runtime": "1.71.1",
+    "@hono/node-server": "^1.13.5",
+    "dotenv": "^16.4.0",
+    "hono": "^4.11.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "rxjs": "7.8.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "electron": "44.3.0",
+    "electron-builder": "26.15.3",
+    "electron-vite": "^3.1.0",
+    "jsdom": "^26.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "vite": "^6.3.0"
+  },
+  "description": "A focus companion for Mac",
+  "author": "The Dave App",
+  "overrides": {
+    "qs": "^6.16.0",
+    "undici@<7": "^6.28.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
