@@ -1,5 +1,9 @@
 # Dave App
 
+[**Download Mac alpha + Chrome helper**](https://github.com/YardSecurityExpert/dave/releases/tag/v0.3.1-alpha.1) · [**Setup instructions**](https://github.com/YardSecurityExpert/dave/releases/download/v0.3.1-alpha.1/SETUP.md)
+
+Apple Silicon (M1 or newer), macOS 14+. This alpha is not notarized; see setup instructions before opening. Bring your own model-provider and Ambiguous API keys.
+
 Built for #AgentsEverywhere.
 
 A macOS menu bar agent prototype for keeping a mission in focus. When attention drifts, Dave offers three choices: return to your work, park the idea, or mark the activity as relevant.
@@ -33,7 +37,7 @@ See the [app README](dave-app/README.md) for alpha verification and remaining wo
 
 ## Website
 
-[Meet Dave](https://thedave.app/) · [Interactive demo](https://YardSecurityExpert.github.io/dave/demo.html)
+[Meet Dave](https://thedave.app/) · [Interactive demo](https://thedave.app/demo.html)
 
 Cloudflare Pages hosts the landing page from `docs/`; see [hosting notes](DAVE_WEBSITE_HOSTING.md). The hosted demo shows Dave’s reminder in the browser.
 
