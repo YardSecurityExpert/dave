@@ -2,7 +2,7 @@
 
 The landing page and interactive demo are deployed at [thedave.app](https://thedave.app/) through Cloudflare Pages project `thedave`. The fallback hostname is [thedave.pages.dev](https://thedave.pages.dev/).
 
-The deployment contains the 19 public files from `docs/`, excluding the GitHub-specific `.nojekyll` marker. `index.html` is the landing page; `demo.html` is the interactive demo. App source, local settings, and the macOS build plan are outside the published directory.
+The deployment contains the 22 public files from `docs/`, excluding the GitHub-specific `.nojekyll` marker. `index.html` is the landing page; `demo.html` is the interactive demo. App source, local settings, and the macOS build plan are outside the published directory.
 
 Cloudflare added the apex CNAME record `@ → thedave.pages.dev`. Its custom-domain dashboard reports **Active** and **SSL enabled**. The existing GitHub Pages deployment remains available.
 
@@ -13,3 +13,5 @@ The site is static and has no build step or backend service. Its demo uses scrip
 The 14 September update presents the tested Mac alpha workflow: connect a selected ChatGPT conversation in Chrome, review a task proposal through CopilotKit with Featherless, and approve creation in Ambiguous. The original interactive demo is labeled as scripted. The landing page links to the public Mac alpha release and setup instructions. Autonomous task execution and native ChatGPT Mac conversation reading remain future work. The demo includes the latest click hints at `https://thedave.app/demo.html`.
 
 Cloudflare confirmed the production Direct Upload deployment succeeded. HTTP checks on the custom domain verified the landing HTML, both updated stylesheets, the concept demo HTML, and Dave mascot against the local public files, excluding Cloudflare’s injected browser-check script. Local HTML asset references and JavaScript syntax checks passed.
+
+The “Built with” strip links to Featherless, CopilotKit, and Ambiguous. Logo assets are hosted locally in `docs/logos/`, sourced from each tool’s official website. It identifies the tools used in the current workflow.
